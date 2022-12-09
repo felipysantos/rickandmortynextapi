@@ -22,10 +22,26 @@ export const Header = () => {
         variant={"ghost"}
         ml={{ base: 5, lg: "100px" }}
         onClick={backPage}
-        transitionDuration={'0.3s'}
+        transitionDuration={"0.3s"}
         _hover={{
-          bgColor: colorMode === "light" ? "#706fd3" : "#6B6F78",
           color: colorMode === "light" ? "#fff" : "#fff",
+          ":before": {
+            width: "100%",
+            height: "100%",
+          },
+        }}
+        position={"relative"}
+        borderRadius={"0"}
+        _before={{
+          transitionDuration: "0.3s",
+          content: '""',
+          zIndex: "-1",
+          position: "absolute",
+          top: 0,
+          left: 0,
+          width: "0%",
+          height: "100%",
+          backgroundColor: "#706fd3",
         }}
       >
         <ArrowLeftIcon fontSize={"10px"} mr={4} />

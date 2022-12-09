@@ -20,27 +20,21 @@ export const ProfileCard = ({ children }: any) => {
         opacity: [0, 1],
         y: 0,
       }}
-      minW={{ base: "375px" }}
       flexDir={{ base: "column", lg: "row" }}
       alignItems={"center"}
-      p={10}
-      borderRadius={20}
       bgColor={colorMode === "light" ? "#706fd3" : "#6B6F78"}
       color={"#fff"}
+      pb={{ base: 10, md: 12, lg: 0 }}
     >
       <Box>
-        <Image
-          borderRadius={10}
-          src={`${children.image}`}
-          alt={`${children.name}`}
-        />
+        <Image src={`${children.image}`} alt={`${children.name}`} />
       </Box>
       <VStack
-        ml={{ base: 0, lg: "60px" }}
         mt={{ base: "15px", lg: 0 }}
+        px={{ base: 0, lg: "60px" }}
         alignItems={"flex-start"}
       >
-        <Heading as="h1" size="2xl">
+        <Heading as="h1" size="2xl" py={2}>
           {children.name}
         </Heading>
         <Heading as="h3" size="md">

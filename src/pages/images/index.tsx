@@ -7,7 +7,6 @@ import {
   HStack,
   Input,
   useColorMode,
-  VStack,
 } from "@chakra-ui/react";
 import { GetServerSideProps } from "next";
 import { useEffect, useState } from "react";
@@ -99,16 +98,48 @@ export default function ImagesPage({ data }: any) {
         <Heading>Rick and Morty</Heading>
 
         <form onSubmit={handleSubmit}>
-          <FormControl>
-            <Flex py={5}>
-              <Input type="search" placeholder="Rick Sanchez" />
+          <FormControl
+            transitionDuration={"0.3s"}
+            border={`2px solid ${colorMode === "light" ? "#fff" : "#1a202c"}`}
+            _focusWithin={{
+              border: `2px solid ${colorMode === "light" ? "#1a202c" : "#fff"}`,
+            }}
+            h={"auto"}
+            my={4}
+          >
+            <Flex w={"100%"} justifyContent={"space-between"}>
+              <Input
+                borderRadius={0}
+                type="search"
+                placeholder="Rick Sanchez"
+                variant={"unstyled"}
+                px={4}
+              />
               <Button
+                variant={"ghost"}
                 type="submit"
-                _hover={{ filter: "brightness(1.1)" }}
-                bgColor={colorMode === "light" ? "#706fd3" : "#6B6F78"}
-                color={"#fff"}
-                ml={4}
                 px={"25px"}
+                transitionDuration={"0.3s"}
+                _hover={{
+                  color: colorMode === "light" ? "#fff" : "#000",
+                  ":before": {
+                    width: "100%",
+                    height: "100%",
+                  },
+                }}
+                position={"relative"}
+                borderRadius={"0"}
+                _before={{
+                  transitionDuration: "0.3s",
+                  content: '""',
+                  zIndex: "-1",
+                  position: "absolute",
+                  top: 0,
+                  left: 0,
+                  width: "0%",
+                  height: "100%",
+                  backgroundColor: colorMode === "light" ? "#706fd3" : "#fff",
+                }}
               >
                 Search
               </Button>
@@ -132,7 +163,7 @@ export default function ImagesPage({ data }: any) {
               width: "6px",
             },
             "&::-webkit-scrollbar-thumb": {
-              background: colorMode === "light" ? "#706fd3" : "#6B6F78",
+              background: colorMode === "light" ? "#706fd3" : "#fff",
               borderRadius: "24px",
             },
           }}
@@ -152,19 +183,57 @@ export default function ImagesPage({ data }: any) {
         <Flex w={"100%"} maxW={"500px"} py={1} justifyContent={"space-around"}>
           <Button
             onClick={handlePrevPage}
-            _hover={{ filter: "brightness(1.1)" }}
-            bgColor={colorMode === "light" ? "#706fd3" : "#6B6F78"}
-            color={"#fff"}
             isDisabled={isDisable}
+            variant={"ghost"}
+            transitionDuration={"0.3s"}
+            _hover={{
+              color: colorMode === "light" ? "#fff" : "#000",
+              ":before": {
+                width: "100%",
+                height: "100%",
+              },
+            }}
+            position={"relative"}
+            borderRadius={"0"}
+            _before={{
+              transitionDuration: "0.3s",
+              content: '""',
+              zIndex: "-1",
+              position: "absolute",
+              top: 0,
+              left: 0,
+              width: "0%",
+              height: "100%",
+              backgroundColor: colorMode === "light" ? "#706fd3" : "#fff",
+            }}
           >
             Prev
           </Button>
           <Button
             onClick={handleNextPage}
-            _hover={{ filter: "brightness(1.1)" }}
-            bgColor={colorMode === "light" ? "#706fd3" : "#6B6F78"}
-            color={"#fff"}
             isDisabled={isDisable}
+            variant={"ghost"}
+            transitionDuration={"0.3s"}
+            _hover={{
+              color: colorMode === "light" ? "#fff" : "#000",
+              ":before": {
+                width: "100%",
+                height: "100%",
+              },
+            }}
+            position={"relative"}
+            borderRadius={"0"}
+            _before={{
+              transitionDuration: "0.3s",
+              content: '""',
+              zIndex: "-1",
+              position: "absolute",
+              top: 0,
+              left: 0,
+              width: "0%",
+              height: "100%",
+              backgroundColor: colorMode === "light" ? "#706fd3" : "#fff",
+            }}
           >
             Next
           </Button>

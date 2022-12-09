@@ -1,9 +1,18 @@
-import { Box, Center, Heading, VStack } from "@chakra-ui/react";
+import {
+  Box,
+  Button,
+  Center,
+  Heading,
+  useColorMode,
+  VStack,
+} from "@chakra-ui/react";
 import Head from "next/head";
 import Link from "next/link";
 import { Header } from "../components/header";
 
 export default function Home() {
+  const { colorMode } = useColorMode();
+
   return (
     <Box transitionDuration={"0.5s"}>
       <Head>
@@ -22,7 +31,34 @@ export default function Home() {
             <Heading textAlign={"center"}>
               Rick and Morty API <br /> with Next
             </Heading>
-            <Link href={`/images`}>Redirect</Link>
+            <Link href={`/images`}>
+              <Button
+                variant={"ghost"}
+                transitionDuration={"0.3s"}
+                _hover={{
+                  color: colorMode === "light" ? "#fff" : "#fff",
+                  ":before": {
+                    width: "100%",
+                    height: "100%",
+                  },
+                }}
+                position={"relative"}
+                borderRadius={"0"}
+                _before={{
+                  transitionDuration: "0.3s",
+                  content: '""',
+                  zIndex: "-1",
+                  position: "absolute",
+                  top: 0,
+                  left: 0,
+                  width: "0%",
+                  height: "100%",
+                  backgroundColor: "#706fd3",
+                }}
+              >
+                Access Api
+              </Button>
+            </Link>
           </VStack>
         </Center>
       </main>
