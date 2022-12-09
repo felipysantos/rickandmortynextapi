@@ -24,7 +24,7 @@ export const Header = () => {
         onClick={backPage}
         transitionDuration={"0.3s"}
         _hover={{
-          color: colorMode === "light" ? "#fff" : "#fff",
+          color: colorMode === "light" ? "#fff" : "#000",
           ":before": {
             width: "100%",
             height: "100%",
@@ -41,7 +41,7 @@ export const Header = () => {
           left: 0,
           width: "0%",
           height: "100%",
-          backgroundColor: "#706fd3",
+          backgroundColor: colorMode === "light" ? "#706fd3" : "#fff",
         }}
       >
         <ArrowLeftIcon fontSize={"10px"} mr={4} />

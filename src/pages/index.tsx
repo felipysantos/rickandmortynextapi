@@ -36,7 +36,7 @@ export default function Home() {
                 variant={"ghost"}
                 transitionDuration={"0.3s"}
                 _hover={{
-                  color: colorMode === "light" ? "#fff" : "#fff",
+                  color: colorMode === "light" ? "#fff" : "#000",
                   ":before": {
                     width: "100%",
                     height: "100%",
@@ -53,7 +53,7 @@ export default function Home() {
                   left: 0,
                   width: "0%",
                   height: "100%",
-                  backgroundColor: "#706fd3",
+                  backgroundColor: colorMode === "light" ? "#706fd3" : "#fff",
                 }}
               >
                 Access Api
