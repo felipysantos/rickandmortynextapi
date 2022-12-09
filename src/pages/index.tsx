@@ -21,7 +21,7 @@ export default function Home() {
           name="description"
           content="Amazing research platform of Rick and Morty characters."
         />
-        <link rel="icon" href="/favicon.svg" />
+        <link rel="icon" href="public\favicon.svg" />
       </Head>
 
       <main>
