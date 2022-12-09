@@ -7,12 +7,12 @@ export default function Home() {
   return (
     <Box transitionDuration={"0.5s"}>
       <Head>
-        <title>Create Next App</title>
+        <title>Rick and Morty</title>
         <meta
           name="description"
           content="Amazing research platform of Rick and Morty characters."
         />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.svg" />
       </Head>
 
       <main>
