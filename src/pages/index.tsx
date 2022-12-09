@@ -9,7 +9,6 @@ import {
 import Head from "next/head";
 import Link from "next/link";
 import { Header } from "../components/header";
-
 export default function Home() {
   const { colorMode } = useColorMode();
 
@@ -21,7 +20,7 @@ export default function Home() {
           name="description"
           content="Amazing research platform of Rick and Morty characters."
         />
-        <link rel="icon" href="public\favicon.svg" />
+        <link rel="shortcut icon" href="/favicon.png" />
       </Head>
 
       <main>

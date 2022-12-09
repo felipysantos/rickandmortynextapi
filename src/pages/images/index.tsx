@@ -9,6 +9,7 @@ import {
   useColorMode,
 } from "@chakra-ui/react";
 import { GetServerSideProps } from "next";
+import Head from "next/head";
 import { useEffect, useState } from "react";
 import { Card } from "../../components/card";
 import { Header } from "../../components/header";
@@ -85,6 +86,14 @@ export default function ImagesPage({ data }: any) {
 
   return (
     <>
+      <Head>
+        <title>Rick and Morty</title>
+        <meta
+          name="description"
+          content="Amazing research platform of Rick and Morty characters."
+        />
+        <link rel="shortcut icon" href="/favicon.png" />
+      </Head>
       <Header />
       <Center
         flexDir={"column"}

@@ -25,8 +25,18 @@ export const ProfileCard = ({ children }: any) => {
       bgColor={colorMode === "light" ? "#706fd3" : "#6B6F78"}
       color={"#fff"}
       pb={{ base: 10, md: 12, lg: 0 }}
+      border={`2px solid ${colorMode === "light" ? "#000" : "#fff"}`}
     >
-      <Box>
+      <Box
+        borderBottom={{
+          base: `2px solid ${colorMode === "light" ? "#000" : "#fff"}`,
+          lg: "none",
+        }}
+        borderRight={{
+          base: "none",
+          lg: `2px solid ${colorMode === "light" ? "#000" : "#fff"}`,
+        }}
+      >
         <Image src={`${children.image}`} alt={`${children.name}`} />
       </Box>
       <VStack
