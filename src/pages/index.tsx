@@ -1,9 +1,11 @@
+import { Box, Center, Heading, VStack } from "@chakra-ui/react";
 import Head from "next/head";
-import Image from "next/image";
-import ImagesPage from "./images";
+import Link from "next/link";
+import { Header } from "../components/header";
+
 export default function Home() {
   return (
-    <div>
+    <Box transitionDuration={"0.5s"}>
       <Head>
         <title>Create Next App</title>
         <meta
@@ -14,9 +16,16 @@ export default function Home() {
       </Head>
 
       <main>
-        <h1>Hello world</h1>
-        <a href={`/images`}>Redirect</a>
+        <Header />
+        <Center h={"100vh"}>
+          <VStack>
+            <Heading textAlign={"center"}>
+              Rick and Morty API <br /> with Next
+            </Heading>
+            <Link href={`/images`}>Redirect</Link>
+          </VStack>
+        </Center>
       </main>
-    </div>
+    </Box>
   );
 }

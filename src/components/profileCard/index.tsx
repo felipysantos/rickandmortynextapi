@@ -1,22 +1,32 @@
-import { Box, Flex, Heading, Image, VStack } from "@chakra-ui/react";
+import {
+  Box,
+  chakra,
+  Flex,
+  Heading,
+  Image,
+  useColorMode,
+  VStack,
+} from "@chakra-ui/react";
+import { motion } from "framer-motion";
 
 export const ProfileCard = ({ children }: any) => {
-  console.log(children);
+  const { colorMode } = useColorMode();
+
   return (
     <Flex
-      border={"2px solid black"}
+      as={motion.div}
+      initial={{ y: "50px" }}
+      animate={{
+        opacity: [0, 1],
+        y: 0,
+      }}
       minW={{ base: "375px" }}
       flexDir={{ base: "column", lg: "row" }}
       alignItems={"center"}
       p={10}
       borderRadius={20}
-      bgColor={
-        children.status === "alive" || children.status === "Alive"
-          ? "green.200"
-          : children.status === "dead" || children.status === "Dead"
-          ? "red.200"
-          : "gray"
-      }
+      bgColor={colorMode === "light" ? "#706fd3" : "#6B6F78"}
+      color={"#fff"}
     >
       <Box>
         <Image
