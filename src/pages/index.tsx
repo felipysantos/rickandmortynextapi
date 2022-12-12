@@ -6,6 +6,7 @@ import {
   useColorMode,
   VStack,
 } from "@chakra-ui/react";
+import { motion } from "framer-motion";
 import Head from "next/head";
 import Link from "next/link";
 import { Header } from "../components/header";
@@ -26,9 +27,17 @@ export default function Home() {
       <main>
         <Header />
         <Center h={"100vh"}>
-          <VStack>
+          <VStack
+            transitionDuration={"0.3s"}
+            as={motion.div}
+            initial={{ y: "50px" }}
+            animate={{
+              opacity: [0, 1],
+              y: 0,
+            }}
+          >
             <Heading textAlign={"center"}>
-              Rick and Morty API <br /> with Next
+              Rick and Morty API <br /> with Next Js
             </Heading>
             <Link href={`/images`}>
               <Button
