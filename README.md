@@ -1,37 +1,89 @@
 # Rick and Morty API
 ![Status Website](https://img.shields.io/website?down_message=red&style=for-the-badge&up_color=green&up_message=online&url=https%3A%2F%2Fspace-flight-news-delta.vercel.app%2F)
 
-
 ![Rick and Morty](https://user-images.githubusercontent.com/72530197/207097538-da836680-a27e-4fec-986e-75272de75f1f.gif)
 
+## Tópicos
+- [Descrição do projeto](#descricao-do-projeto)
+- [Instruções](#instrucoes)
+- [Ferramentas](#ferramentas)
 
-First, run the development server:
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+<h2 id=descricao-do-projeto>Descrição</h2> 
+<p>
+  Uma biblioteca de personagens da série Rick and Morty, utilizando Next + Typescript. Nela, é possível pesquisar por personagens e exibir cartões com mais detalhes sobre cada personagem.
+</p>
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+<h2 id=instrucoes>Instruções</h2> 
+<h3>Instruções de uso</h3>
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+<p>
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+- Carregar uma seção de 20 personagens
+  <br/>
+  
+- Possui uma caixa de pesquisa, em que a aplicação irá vasculhar o banco de dados e retornar o personagem buscado, caso contrário, ele retorna uma mensagem de 'Not found'
+  <br/>
+  
+- Cada card leva a uma página de perfil do personagem, onde é exibido mais informações do mesmo
+  <br/>
+  
+- Os botões Prev e Next carregam os personagens posteriores ou anteriores em relação a página
+  <br/>
+</p>
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+<h3>Instruções de instalação</h3>
+<p>
+  
+- Primeiro você deve fazer um fork no github e clonar o repositório em sua máquina;
+  <br/>
+  
+- Abra a partir do seu editor de código
+  <br/>
+  
+- Instale as depências com o comando yarn 
+  <br/>
+  
+- Execute a aplicação em um servidor de desenvolvimento com os comandos 'yarn dev' ou 'npm dev'
+  <br/>
 
-## Learn More
+- Para construção da página, rode o comando 'yarn build' e execute com comando 'yarn start' para rodar a aplicação em ambiente de produção
+  <br/>
 
-To learn more about Next.js, take a look at the following resources:
+- Abra [http://localhost:3000](http://localhost:3000) com o seu navegador para ver os resultados
+  <br/>
+  
+- Você pode está modificando os arquivos da pasta [pages](http://localhost:3000/), [pages/images](http://localhost:3000/images) e [pages/images/character](http://localhost:3000/images/character) 
+  <br/>
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Você pode está modificando os arquivos da pasta pages, pages/images e pages/images/character 
+  <br/>
+</p>
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+<h2 id=ferramentas>Ferramentas utilizadas</h2> 
+<p>
+  
+- <a href="https://nextjs.org/" target="_blank">Next JS</a> 
+  <br/>
+  
+- <a href="https://pt-br.reactjs.org/" target="_blank">React</a> 
+  <br/>
+  
+- <a href="https://www.typescriptlang.org/" target="_blank">Typescript</a> 
+  <br/>
+  
+- <a href="https://chakra-ui.com/" target="_blank">Chakra-UI</a> 
+  <br/>
 
-## Deploy on Vercel
+- <a href="https://www.framer.com/motion/" target="_blank">Framer motion</a> 
+  <br/>
+</p>
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+<h2>Acesso ao projeto</h2>
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+<p>Você pode acessar o <a href="https://github.com/felipysantos/rickandmortynextapi/" traget="_blanck">código fonte</a> ou o <a href="https://rickandmortynextapi.vercel.app/" traget="_blanck">site</a> do projeto.</p>
+
+<h2>Desenvolvedor</h2>
+
+ [<img src="https://avatars.githubusercontent.com/u/72530197?v=4" width=115><br><sub>Felipy Santos</sub>](https://github.com/felipysantos) 
+ 
