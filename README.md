@@ -1,4 +1,4 @@
-![Rick and Morty]![favicon](https://user-images.githubusercontent.com/72530197/207095305-af2d0380-f05f-4315-966f-f166223c6805.svg)
+![Rick and Morty](https://user-images.githubusercontent.com/72530197/207095305-af2d0380-f05f-4315-966f-f166223c6805.svg)
 
 ## Rick and Morty API
 ![Status Website](https://img.shields.io/website?down_message=red&style=for-the-badge&up_color=green&up_message=online&url=https%3A%2F%2Fspace-flight-news-delta.vercel.app%2F)
