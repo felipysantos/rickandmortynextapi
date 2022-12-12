@@ -1,7 +1,8 @@
-![Rick and Morty]
-
 # Rick and Morty API
 ![Status Website](https://img.shields.io/website?down_message=red&style=for-the-badge&up_color=green&up_message=online&url=https%3A%2F%2Fspace-flight-news-delta.vercel.app%2F)
+
+
+![Rick and Morty](https://user-images.githubusercontent.com/72530197/207096638-156fd2e4-6d39-4881-bd0d-a03658c002f5.mp4)
 
 First, run the development server:
 
