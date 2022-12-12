@@ -83,7 +83,6 @@ export default function ImagesPage({ data }: any) {
       current: endpoint,
     });
   };
-
   return (
     <>
       <Head>
