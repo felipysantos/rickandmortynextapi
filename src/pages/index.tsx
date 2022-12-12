@@ -30,7 +30,7 @@ export default function Home() {
           <VStack
             transitionDuration={"0.3s"}
             as={motion.div}
-            initial={{ y: "50px" }}
+            initial={{ y: "-50px" }}
             animate={{
               opacity: [0, 1],
               y: 0,
